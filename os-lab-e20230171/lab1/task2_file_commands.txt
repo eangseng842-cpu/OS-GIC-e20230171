@@ -1,0 +1,13 @@
+/home/gic-reng-iengseng/oslab-work/lab1/task2_files
+candle.txt
+river.txt
+This is file river
+This is file candle
+candle.txt
+river.txt
+river_copy.txt
+candle_renamed.txt
+river.txt
+river_copy.txt
+candle_renamed.txt
+river.txt

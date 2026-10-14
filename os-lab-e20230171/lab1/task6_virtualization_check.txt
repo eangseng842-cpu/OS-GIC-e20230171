@@ -1,0 +1,4 @@
+kvm
+Hypervisor vendor:                       KVM
+7.0.0-38-generic
+i4gic-os
