@@ -1,8 +1,8 @@
 # Class Activity 1 — System Calls in Practice
 
-- **Student Name:** Seng
+- **Student Name:** RENG IENGSENG
 - **Student ID:** e20230171
-- **Date:** November 9, 2026
+- **Date:** November 10, 2026
 
 ---
 
@@ -31,6 +31,7 @@ Screenshot of running `copyfilesyscall.c` on Linux:
 **Version A — Library Functions (`file_creator_lib.c`):**
 
 ![Task 1A - Library](screenshots/task1_creator_lib.png)
+24\
 
 **Version B — POSIX System Calls (`file_creator_sys.c`):**
 
