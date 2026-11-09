@@ -8,7 +8,7 @@
 
 int main() {
     const int SIZE = 4096;
-    const char *name = "OS-seng";
+    const char *name = "OS-iengseng";
 
     int shm_fd;
     void *ptr;
