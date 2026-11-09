@@ -1,0 +1,11 @@
+total 36
+drwxrwxr-x 2 gic-reng-iengseng gic-reng-iengseng  4096 Nov 10 02:09 .
+drwxrwxr-x 7 gic-reng-iengseng gic-reng-iengseng  4096 Nov 10 01:46 ..
+-rw-rw-r-- 1 gic-reng-iengseng gic-reng-iengseng   245 Nov 10 01:44 command_used_forkchild.txt
+-rwxrwxr-x 1 gic-reng-iengseng gic-reng-iengseng 16392 Nov 10 02:09 forkchild
+-rw-rw-r-- 1 gic-reng-iengseng gic-reng-iengseng  1350 Nov 10 01:43 forkchild.c
+-rw-rw-r-- 1 gic-reng-iengseng gic-reng-iengseng     0 Nov 10 02:09 result_forkchild.txt
+Parent process (PID: 1811690) — creating child...
+Parent: waiting for child (PID: 1811691) to finish...
+Parent: child exited with status 0
+Parent: done.

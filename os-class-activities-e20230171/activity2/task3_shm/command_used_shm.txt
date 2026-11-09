@@ -1,0 +1,9 @@
+cd activity2/task3_shm
+nano shm-producer.c
+nano shm-consumer.c
+gcc -o shm-producer shm-producer.c -lrt
+gcc -o shm-consumer shm-consumer.c -lrt
+./shm-producer
+./shm-consumer > result-shm-ipc.txt
+cat result-shm-ipc.txt
+history | tail -n 20 > command_used_shm.txt

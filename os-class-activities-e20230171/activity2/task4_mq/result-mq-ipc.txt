@@ -1,0 +1,3 @@
+Receiver: message received from queue '/queue-seng'
+Receiver: message = "Hello from sender! This is message queue IPC."
+Receiver: queue unlinked.
