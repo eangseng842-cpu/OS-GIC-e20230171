@@ -1,0 +1,10 @@
+gcc -o file_creator_lib file_creator_lib.c
+./file_creator_lib
+cat output.txt
+gcc -o file_creator_sys file_creator_sys.c
+./file_creator_sys
+cat output.txt
+gcc -o file_reader_lib file_reader_lib.c
+./file_reader_lib
+gcc -o file_reader_sys file_reader_sys.c
+./file_reader_sys
