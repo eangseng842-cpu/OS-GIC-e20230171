@@ -13,19 +13,42 @@ int main() {
 
     printf("Parent process (PID: %lu) — creating child...\n", GetCurrentProcessId());
 
-    if (!CreateProcess(
-            "C:\\Windows\\System32\\mspaint.exe",  /* Application path */
-            NULL,           /* Command line */
-            NULL,           /* Process security attributes */
-            NULL,           /* Thread security attributes */
-            FALSE,          /* Inherit handles */
-            0,              /* Creation flags */
-            NULL,           /* Environment */
-            NULL,           /* Current directory */
-            &si,            /* Startup info */
-            &pi             /* Process information */
-        ))
-    {
+    /*
+     * Attempt to launch mspaint.
+     * On Windows 10, mspaint is typically at C:\Windows\System32\mspaint.exe.
+     * On Windows 11, mspaint is a Store app, so we fallback to "mspaint.exe" via PATH.
+     */
+    char cmd[] = "mspaint.exe";
+    BOOL created = CreateProcess(
+        "C:\\Windows\\System32\\mspaint.exe",  /* Application path */
+        NULL,           /* Command line */
+        NULL,           /* Process security attributes */
+        NULL,           /* Thread security attributes */
+        FALSE,          /* Inherit handles */
+        0,              /* Creation flags */
+        NULL,           /* Environment */
+        NULL,           /* Current directory */
+        &si,            /* Startup info */
+        &pi             /* Process information */
+    );
+
+    if (!created) {
+        /* Fallback for Windows 11 / Store app version */
+        created = CreateProcess(
+            NULL,
+            cmd,
+            NULL,
+            NULL,
+            FALSE,
+            0,
+            NULL,
+            NULL,
+            &si,
+            &pi
+        );
+    }
+
+    if (!created) {
         fprintf(stderr, "CreateProcess failed (error %lu).\n", GetLastError());
         return 1;
     }
