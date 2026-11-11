@@ -1,0 +1,6 @@
+reports/budget 2026.txt
+reports/cash flow.txt
+reports/README.txt
+TechCorp/Sales/archive/first-original.txt
+TechCorp/Sales/budget 2026.txt
+TechCorp/Sales/cash flow.txt

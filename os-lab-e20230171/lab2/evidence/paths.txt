@@ -1,0 +1,22 @@
+# Step 1 (from incoming/)
+mv -- "cash flow.txt" ../reports/
+
+# Step 2 (from lab2/)
+mv -- "$OSLAB_WORKSPACE/lab2/incoming/budget 2026.txt" "$OSLAB_WORKSPACE/lab2/reports/budget 2026.txt"
+
+# Step 3 (from lab2/)
+cp -- "reports/cash flow.txt" "reports/budget 2026.txt" "TechCorp/Sales/"
+
+# Step 4 (from lab2/)
+cp -- "reports/cash flow.txt" "TechCorp/Sales/archive/first-original.txt"
+
+# Step 5 (from TechCorp/Support/)
+cat -- "../Sales/cash flow.txt"
+cat -- "$OSLAB_WORKSPACE/lab2/TechCorp/Sales/cash flow.txt"
+
+# Step 6 Decision
+Decision: For step 3, I chose relative paths because I was already in the lab2 directory, making the paths shorter and easier to type. Absolute paths would be better inside scripts or when running commands from another directory where the current working directory might change.
+
+# Core 3 Error & Fix (from TechCorp/Support/)
+Error: cat: 'reports/cash flow.txt': No such file or directory
+Fix: "../../reports/cash flow.txt"
